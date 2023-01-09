@@ -27,7 +27,7 @@ export default function Layout({ children, home }) {
 
 	return (
 		<div className=" flex flex-col min-h-screen">
-			<nav className="bg-gray-800 py-6 px-4">
+			<nav className="bg-purple-900 my-4 mr py-6 px-4">
 				<div className="container mx-auto flex items-center justify-between">
 					<Link href="/">
 						<a className="text-white font-bold text-xl">
