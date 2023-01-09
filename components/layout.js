@@ -1,13 +1,32 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-
-import React from "react";
+//import toggleDarkMode from "../utils/dark-mode";
+import React, { useEffect } from "react";
 import Link from "next/link";
 
-export default function Layout({ children }) {
+export default function Layout({ children, home }) {
+	useEffect(() => {
+		function bindToggleButtonEventListener() {
+			const toggleButton = document.querySelector("#dark-mode-toggle");
+			toggleButton.addEventListener("click", toggleDarkMode);
+		}
+
+		function unbindToggleButtonEventListener() {
+			const toggleButton = document.querySelector("#dark-mode-toggle");
+			toggleButton.addEventListener("click", toggleDarkMode);
+		}
+
+		function toggleDarkMode() {
+			document.body.classList.toggle("dark-mode");
+		}
+
+		bindToggleButtonEventListener();
+		return unbindToggleButtonEventListener;
+	}, []);
+
 	return (
-		<div className="flex flex-col min-h-screen">
+		<div className=" flex flex-col min-h-screen">
 			<nav className="bg-gray-800 py-6 px-4">
 				<div className="container mx-auto flex items-center justify-between">
 					<Link href="/">
@@ -39,13 +58,24 @@ export default function Layout({ children }) {
 					</div>
 				</div>
 			</nav>
-			
-			<main className="bg-gray-100 py-6">
+			<button
+				id="dark-mode-toggle"
+				className="bg-blue-500 hover:bg-blue-700 font-bold m-2 text-white p-2 dark-mode rounded-full"
+			>
+				Toggle Dark Mode
+			</button>
+
+			<main className="py-6">
 				<div className="container mx-auto px-4">
 					{children}
+					{!home && (
+						<Link href="/" className="bg-green-900 p-4 m-4 w-4 h-4">
+							<a>Home Page</a>
+						</Link>
+					)}
 				</div>
 			</main>
-			<footer className="bg-gray-800 py-6">
+			<footer className="bg-gray-800 py-6 ">
 				<div className="container mx-auto flex items-center justify-between">
 					<div className="text-white font-bold text-xl">
 						Non-Profit Organization

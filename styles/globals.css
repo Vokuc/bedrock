@@ -25,6 +25,68 @@ a {
   }
 }
 
+/* .dark-mode {
+	@apply bg-gray-800 text-white;
+}
+
+.dark-mode h1 {
+	@apply text-red-500;
+}
+
+.dark-mode p {
+	@apply text-green-500;
+}
+ */
+/* */
+
+/* Light mode styles */
+.bg-red-100 {
+  background-color: #ffcdd2;
+}
+
+.text-gray-800 {
+  color: #424242;
+}
+
+.hover:bg-red-200:hover {
+  background-color: #ef9a9a;
+}
+
+.focus:bg-red-200:focus {
+  background-color: #ef9a9a;
+}
+
+.active:bg-red-300:active {
+  background-color: #e57373;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #6c0abb;
+  color: #fff;
+}
+
+.dark-mode .bg-red-800 {
+  background-color: #b71c1c;
+}
+
+.dark-mode .text-gray-100 {
+  color: #fff;
+}
+
+.dark-mode .hover:bg-red-700:hover {
+  background-color: #c62828;
+}
+
+.dark-mode .focus:bg-red-700:focus {
+  background-color: #c62828;
+}
+
+.dark-mode .active:bg-red-600:active {
+  background-color: #f44336;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 const AboutPage = () => {
 	return (
 		<Layout>
-			<div className="bg-black min-h-screen p-6">
+			<div className=" min-h-screen p-6">
 				<div className="container mx-auto px-4">
 					<h1 className="text-4xl font-bold mb-4">
 						About Our Non-Profit
