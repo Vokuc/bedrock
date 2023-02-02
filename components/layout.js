@@ -29,31 +29,33 @@ export default function Layout({ children, home }) {
 		<div className=" flex flex-col min-h-screen">
 			<nav className="bg-purple-900 my-4 mr-8 py-6 px-4">
 				<div className="container mx-auto flex items-center justify-between">
-					<Link href="/">
-						<a className="text-white font-bold text-xl">
-							THE BEDROCK INITIATIVE
-						</a>
+					<Link className="text-white font-bold text-xl" href="/">
+						THE BEDROCK INITIATIVE
 					</Link>
 					<div className="flex items-center">
-						<Link href="/about">
-							<a className="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
-								About
-							</a>
+						<Link
+							className="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+							href="/about"
+						>
+							About
 						</Link>
-						<Link href="/projects">
-							<a className="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white  focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
-								Projects
-							</a>
+						<Link
+							className="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white  focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+							href="/projects"
+						>
+							Projects
 						</Link>
-						<Link href="/donate">
-							<a className="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
-								Donate
-							</a>
+						<Link
+							className="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+							href="/donate"
+						>
+							Donate
 						</Link>
-						<Link href="/contact">
-							<a className="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white  focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
-								Contact
-							</a>
+						<Link
+							className="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white  focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+							href="/contact"
+						>
+							Contact
 						</Link>
 					</div>
 				</div>
@@ -70,7 +72,7 @@ export default function Layout({ children, home }) {
 					{children}
 					{!home && (
 						<Link href="/" className="bg-green-900 p-4 m-4 w-4 h-4">
-							<a>Home Page</a>
+							Home Page
 						</Link>
 					)}
 				</div>
@@ -81,20 +83,23 @@ export default function Layout({ children, home }) {
 						Non-Profit Organization
 					</div>
 					<div className="flex items-center">
-						<Link href="/about">
-							<a className="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
-								About
-							</a>
+						<Link
+							className="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+							href="/about"
+						>
+							About
 						</Link>
-						<Link href="/projects">
-							<a className="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
-								Projects
-							</a>
+						<Link
+							className="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+							href="/projects"
+						>
+							Projects
 						</Link>
-						<Link href="/donate">
-							<a className="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
-								Donate
-							</a>
+						<Link
+							className="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+							href="/donate"
+						>
+							Donate
 						</Link>
 						<a
 							href="#"
