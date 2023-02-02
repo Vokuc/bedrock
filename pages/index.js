@@ -4,8 +4,23 @@ import styles from "../styles/Home.module.css";
 import Layout from "../components/layout";
 import React from "react";
 import Link from "next/link";
+import {previewData} from "next/headers";
+import { groq } from "next-sanity";
 
-export default function LandingPage() {
+const query = groq`
+*[_type=="post"] {
+	...,
+	author->,
+	categories[]->
+} | order(_createdAt desc)
+`
+
+export default async function LandingPage() {
+	if (previewData()) {
+		return <div>Preview Mode</div>
+	}
+
+	const  posts = await client.fetch(query);
 	return (
 		<Layout>
 			<div className="bg-purple-900">
